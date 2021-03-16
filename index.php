@@ -14,11 +14,12 @@ class Merchandise {
         $this->provenienza = $provenienza;
     }
 
-    //GETTER
+    //GETTERS
 
     public function getBrand() {
         return $this->marca;
     }
+
     public function getPrice() {
         return $this->prezzo;
     }
@@ -62,10 +63,16 @@ class Customer {
     // public function sell() {
     //     $this->sales[] = ;
     // }
+
+    //GETTERS
+    public function getName() {
+        return $this->name;
+    }
+
 }
 
 $pinco = new Customer('pincopallino', '33', 'pincop@gmail.com', 1);
 
 $pinco->buy($nike);
 
-var_dump($pinco);
+echo $pinco->getName() . ' ha acquistato il modello ' . $nike->getBrand() . ' al prezzo di ' . $nike->getPrice() . ' Euro';
